@@ -1,0 +1,396 @@
+/*
+	custom.css — personalization layer for Sergio Leandro Litwiñiuk
+	Applied on top of Prologue by HTML5 UP (main.css).
+	Keeping overrides here means main.css stays untouched and upgradeable.
+*/
+
+/* ------------------------------------------------------------------
+   1. Typography
+------------------------------------------------------------------ */
+
+	body, input, select, textarea {
+		font-family: 'DM Sans', 'Source Sans Pro', sans-serif;
+	}
+
+	body {
+		font-size: 16.5pt;
+		color: #5f5f5f;
+	}
+
+	#main h1, #main h2, #main h3 {
+		font-family: 'Source Serif 4', Georgia, serif;
+		letter-spacing: -0.01em;
+		color: #2e3c5a;
+	}
+
+	#header #logo h1,
+	#header #logo p,
+	#nav ul li a span {
+		font-family: 'DM Sans', sans-serif;
+	}
+
+	#header #logo h1 {
+		letter-spacing: 0.01em;
+	}
+
+/* ------------------------------------------------------------------
+   2. Palette — deep slate blue + neutral grays
+------------------------------------------------------------------ */
+
+	/* Base backgrounds */
+	#header {
+		background: #1e2633 url("images/overlay.png");
+	}
+
+	#main > section.two   { background-color: #f7f9fc; }
+	#main > section.three { background-color: #eef2f8; }
+	#main > section.four  { background-color: #e7ecf4; }
+
+	/* Hero cover: banner + soft dark gradient for text contrast */
+	#main > section.one {
+		background-color: #2e3c5a;
+		background-image:
+			linear-gradient(135deg, rgba(30, 38, 51, 0.82), rgba(46, 60, 90, 0.72)),
+			url("../../images/banner.jpg");
+		background-size: cover, cover;
+		background-position: center center, center center;
+	}
+
+	/* Accent links */
+	a {
+		color: #2e3c5a;
+		border-bottom-color: rgba(46, 60, 90, 0.35);
+	}
+
+	a:hover {
+		color: #1c2740;
+	}
+
+	#main > section.dark a,
+	#main > section.one a {
+		color: #eef2f8;
+	}
+
+	/* Buttons */
+	input[type="submit"], .button {
+		background-color: #2e3c5a;
+	}
+
+	input[type="submit"]:hover, .button:hover {
+		background-color: #3d4f73;
+	}
+
+	/* Hero button needs contrast against the dark cover */
+	#main > section.one .button {
+		background-color: #7fb2ae;
+	}
+
+	#main > section.one .button:hover {
+		background-color: #93c6c2;
+	}
+
+	/* Sidebar nav */
+	#nav ul li a span:before {
+		color: #6b7688;
+	}
+
+	#nav ul li a.active span:before,
+	#nav ul li a:hover span:before {
+		color: #7fb2ae;
+	}
+
+	#nav ul li a span {
+		color: #c8d0dd;
+	}
+
+	#nav ul li a.active span,
+	#nav ul li a:hover span {
+		color: #ffffff;
+	}
+
+	/* Sidebar social icons */
+	#header .bottom .icons a {
+		color: #c8d0dd;
+	}
+
+	#header .bottom .icons a:hover {
+		color: #7fb2ae;
+	}
+
+/* ------------------------------------------------------------------
+   3. Footer
+------------------------------------------------------------------ */
+
+	#footer {
+		background-color: #e7ecf4;
+		color: #6b7688;
+	}
+
+	#footer a {
+		color: #2e3c5a;
+	}
+
+/* ------------------------------------------------------------------
+   4. Section headers
+------------------------------------------------------------------ */
+
+	#main > section > .container > header h2 {
+		font-weight: 600;
+		margin-bottom: 1em;
+	}
+
+	#main > section > .container > header h2:after {
+		content: "";
+		display: block;
+		width: 3.5em;
+		height: 2px;
+		margin: 0.6em auto 0 auto;
+		background: #7fb2ae;
+	}
+
+	#main > section.one > .container > header h2:after {
+		background: #7fb2ae;
+	}
+
+/* ------------------------------------------------------------------
+   5. About — quick facts
+------------------------------------------------------------------ */
+
+	.facts {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1em 2em;
+		margin-top: 2.25em;
+		text-align: left;
+	}
+
+	.fact {
+		border-left: 3px solid #7fb2ae;
+		padding: 0.1em 0 0.1em 1em;
+	}
+
+	.fact strong {
+		display: block;
+		color: #2e3c5a;
+		font-size: 0.85em;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+
+	.fact span {
+		color: #5f5f5f;
+	}
+
+/* ------------------------------------------------------------------
+   6. Timeline (Experience / Education)
+------------------------------------------------------------------ */
+
+	.timeline {
+		text-align: left;
+		max-width: 46em;
+		margin: 0 auto;
+	}
+
+	.entry {
+		position: relative;
+		padding: 0 0 0 1.75em;
+		margin-bottom: 2.25em;
+		border-left: 2px solid rgba(46, 60, 90, 0.15);
+	}
+
+	.entry:before {
+		content: "";
+		position: absolute;
+		left: -0.5em;
+		top: 0.35em;
+		width: 0.8em;
+		height: 0.8em;
+		border-radius: 50%;
+		background: #7fb2ae;
+		border: 2px solid #f5fafa;
+	}
+
+	.entry:last-child {
+		margin-bottom: 0;
+	}
+
+	.entry-head {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 0.25em 1em;
+	}
+
+	.entry-head h3 {
+		margin: 0;
+		font-size: 1.15em;
+	}
+
+	.entry .when {
+		font-size: 0.82em;
+		color: #7a8496;
+		white-space: nowrap;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.entry .role {
+		margin: 0.15em 0 0.6em 0;
+		font-style: italic;
+		color: #6b7688;
+	}
+
+	.entry ul {
+		margin: 0;
+	}
+
+	.entry ul li {
+		font-size: 0.92em;
+		margin-bottom: 0.3em;
+	}
+
+/* ------------------------------------------------------------------
+   7. Skills grid
+------------------------------------------------------------------ */
+
+	.skills {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25em;
+		text-align: left;
+	}
+
+	.skill {
+		background: #ffffff;
+		border: 1px solid rgba(46, 60, 90, 0.08);
+		border-radius: 0.5em;
+		padding: 1.1em 1.25em;
+		box-shadow: 0 0.5em 1.25em rgba(46, 60, 90, 0.05);
+	}
+
+	.skill h3 {
+		margin: 0 0 0.4em 0;
+		font-size: 1.05em;
+	}
+
+	.skill p {
+		margin: 0;
+		font-size: 0.88em;
+	}
+
+/* ------------------------------------------------------------------
+   8. Projects
+------------------------------------------------------------------ */
+
+	.item .caption {
+		font-size: 0.82em;
+		text-align: left;
+		color: #6b7688;
+		margin-top: 0.5em;
+	}
+
+	.item .image.fit img {
+		border-radius: 0.4em;
+	}
+
+/* ------------------------------------------------------------------
+   9. Publications / Certifications / Contact
+------------------------------------------------------------------ */
+
+	.pubs {
+		text-align: left;
+		max-width: 48em;
+		margin: 0 auto;
+		list-style: none;
+		counter-reset: pub;
+		padding: 0;
+	}
+
+	.pubs li {
+		position: relative;
+		padding-left: 2.5em;
+		margin-bottom: 1.1em;
+		font-size: 0.95em;
+		counter-increment: pub;
+	}
+
+	.pubs li:before {
+		content: "[" counter(pub) "]";
+		position: absolute;
+		left: 0;
+		color: #7fb2ae;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.certs {
+		text-align: left;
+		max-width: 42em;
+		margin: 0 auto;
+		list-style: none;
+		padding: 0;
+	}
+
+	.certs li {
+		font-size: 0.88em;
+		padding: 0.3em 0 0.3em 1.4em;
+		position: relative;
+		border-bottom: 1px solid rgba(46, 60, 90, 0.07);
+	}
+
+	.certs li:before {
+		content: "\f00c";
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		position: absolute;
+		left: 0;
+		color: #7fb2ae;
+		font-size: 0.8em;
+	}
+
+	.subhead {
+		margin-top: 2em;
+		font-size: 1.1em;
+		text-align: left;
+		max-width: 46em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.contact-list {
+		list-style: none;
+		padding: 0;
+		margin: 1.5em auto 2em auto;
+		max-width: 30em;
+		text-align: left;
+	}
+
+	.contact-list li {
+		padding: 0.45em 0;
+		font-size: 0.95em;
+	}
+
+	.contact-list span.icon {
+		color: #2e3c5a;
+		width: 1.75em;
+		display: inline-block;
+	}
+
+	.muted {
+		font-size: 0.82em;
+		color: #7a8496;
+	}
+
+/* ------------------------------------------------------------------
+   10. Responsive tweaks
+------------------------------------------------------------------ */
+
+	@media screen and (max-width: 980px) {
+		.facts,
+		.skills {
+			grid-template-columns: 1fr;
+		}
+
+		.entry-head {
+			flex-direction: column;
+		}
+	}
